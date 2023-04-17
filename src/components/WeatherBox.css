@@ -1,0 +1,53 @@
+.weatherBox-cont {
+  height: 400px;
+  margin: auto;
+
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.inactiveCard {
+  display: none;
+}
+
+.activeCard {
+  display: block;
+}
+
+.preview-card,
+.next-card {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .weatherBox-cont {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+
+    height: 350px;
+    position: relative;
+  }
+
+  .preview-card {
+    display: block;
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    top: 40%;
+    left: 0;
+    cursor: pointer;
+  }
+  .next-card {
+    display: block;
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    top: 40%;
+    left: 96%;
+    cursor: pointer;
+  }
+}
