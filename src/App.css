@@ -52,17 +52,8 @@
   width: 50px;
 }
 
-@keyframes glowing {
-  0% {
-    border-color: #0091b2;
-    box-shadow: 0 0 3px #0091b2;
-  }
-  50% {
-    border-color: #fc06e4;
-    box-shadow: 0 0 15px #fc06e4;
-  }
-  100% {
-    border-color: #0091b2;
-    box-shadow: 0 0 3px #0091b2;
+@media (max-width: 1200px) {
+  .main-search_cont {
+    margin-bottom: 0;
   }
 }
