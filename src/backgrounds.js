@@ -8,6 +8,7 @@ const backgrounds = {
   65: `${process.env.PUBLIC_URL}/img/65.jpg`,
   95: `${process.env.PUBLIC_URL}/img/95.jpg`,
   80: `${process.env.PUBLIC_URL}/img/61.jpg`,
+  81: `${process.env.PUBLIC_URL}/img/63.jpg`,
 
   // 45: "Fog",
   // 48: "Rime Fog",

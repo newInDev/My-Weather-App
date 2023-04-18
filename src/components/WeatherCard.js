@@ -16,6 +16,7 @@ const WeatherCard = (props) => {
     backgroundPosition: "center",
     overflow: "hidden",
   };
+
   const [moreInfo, setMoreInfo] = useState(false);
   const [initialWeather, setInitialWeather] = useState({});
   const [cardFront, setCardFront] = useState(true);

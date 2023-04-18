@@ -8,7 +8,7 @@ const SearchBar = (props) => {
       event.key === "Enter" ||
       event.key === "Go" ||
       event.key === "Search" ||
-      event.key === 13
+      event.keyCode === 13
     ) {
       event.preventDefault();
       props.handleSearch(event.target.value);
