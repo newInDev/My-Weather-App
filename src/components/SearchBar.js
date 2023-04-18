@@ -16,7 +16,7 @@ const SearchBar = (props) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 || event.which === 13) {
       event.preventDefault();
       props.handleSearch(event.target.value);
     }
