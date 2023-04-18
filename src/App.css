@@ -2,6 +2,7 @@
   background-color: rgba(109, 107, 107, 0.808);
   min-height: 100vh;
   padding: 10px 10px 0 10px;
+  width: 100%;
   /* background-image: url("../public/img/background.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;

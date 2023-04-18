@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const SearchBar = (props) => {
   const catchSavevalue = function (event) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" || event.key === "Go" || event.key === "Search") {
       props.handleSearch(event.target.value);
     }
   };

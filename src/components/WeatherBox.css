@@ -23,15 +23,24 @@
 
 @media (max-width: 1200px) {
   .weatherBox-cont {
-    width: 40%;
+    width: auto;
+    /* width: 40%;
     height: 350px;
     margin: auto;
     padding-left: 450px;
     background-color: blueviolet;
     background-color: #333;
     overflow-x: auto;
+    overscroll-behavior-inline: contain;
     white-space: nowrap;
-    gap: 20px;
+    gap: 20px; */
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 15px;
+    overflow-x: scroll;
+    justify-content: start;
   }
   .weatherBox-cont::-webkit-scrollbar {
     display: none;
