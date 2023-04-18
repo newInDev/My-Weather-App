@@ -110,7 +110,8 @@ const WeatherCard = (props) => {
   };
 
   return (
-    <div className={`card ${!props.current ? "card-inactive" : ""}`}>
+    //{`card ${!props.current ? "card-inactive" : ""}`}
+    <div className="card">
       <div className={`front ${!cardFront ? "" : "active"}`} style={styles}>
         <div className="location">{props.cityName}</div>
         <div className="more" onClick={MoreInfoClick}>

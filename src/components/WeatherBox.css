@@ -1,6 +1,6 @@
 .weatherBox-cont {
   height: 400px;
-  margin: auto;
+  /* margin: auto; */
 
   padding: 20px;
   display: flex;
@@ -23,13 +23,18 @@
 
 @media (max-width: 1200px) {
   .weatherBox-cont {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-
+    width: 40%;
     height: 350px;
-    position: relative;
+    margin: auto;
+    padding-left: 450px;
+    background-color: blueviolet;
+    background-color: #333;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+  }
+  .weatherBox-cont::-webkit-scrollbar {
+    display: none;
   }
 
   .preview-card {

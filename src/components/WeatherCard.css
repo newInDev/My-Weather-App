@@ -225,7 +225,15 @@
 }
 
 @media (max-width: 1200px) {
-  .card-inactive {
-    display: none;
+  /* .card {
+    transform: translate(-50% -50%);
+    position: relative;
+    width: 500px;
+    height: 250px;
+  }
+   */
+  .card {
+    width: 500px;
+    height: 250px;
   }
 }
