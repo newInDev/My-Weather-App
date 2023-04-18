@@ -15,6 +15,13 @@ const SearchBar = (props) => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      props.handleSearch(event.target.value);
+    }
+  };
+
   return (
     <motion.div
       className="searchbar-cont"
@@ -22,6 +29,7 @@ const SearchBar = (props) => {
       animate={{ width: `${35}%`, visibility: "visible" }}
       transition={{ type: "spring", delay: 0.5, duration: 3 }}
       onKeyUp={catchSavevalue}
+      onKeyDown={handleKeyDown}
     >
       <input type="text" placeholder="Enter Location" />
     </motion.div>
