@@ -34,6 +34,7 @@ const SearchBar = (props) => {
       animate={{ width: `${35}%`, visibility: "visible" }}
       transition={{ type: "spring", delay: 0.5, duration: 3 }}
       onKeyUp={catchSavevalue}
+      onSubmit={catchSavevalue}
     >
       <input
         type="text"
