@@ -3,6 +3,7 @@ import "./SearchBar.css";
 import { motion } from "framer-motion";
 
 const SearchBar = (props) => {
+  const [findLocation, setFindLocation] = useState("");
   const catchSavevalue = function (event) {
     if (
       event.key === "Enter" ||
@@ -18,8 +19,7 @@ const SearchBar = (props) => {
   const handleKeyDown = (event) => {
     if (event.keyCode === 13 || event.which === 13) {
       event.preventDefault();
-      props.handleSearch(event.target.value);
-      alert("I was Clicked");
+      props.handleSearch(findLocation);
     }
   };
 
@@ -32,7 +32,11 @@ const SearchBar = (props) => {
       onKeyUp={catchSavevalue}
       onKeyDown={handleKeyDown}
     >
-      <input type="text" placeholder="Enter Location" />
+      <input
+        type="text"
+        placeholder="Enter Location"
+        onChange={(e) => setFindLocation(e.target.value)}
+      />
     </motion.div>
   );
 };
