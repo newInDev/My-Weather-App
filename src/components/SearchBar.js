@@ -18,15 +18,6 @@ const SearchBar = (props) => {
     }
   };
 
-  // const handleSubmit = () => {
-  //   // if (event.keyCode === 13 || event.which === 13) {
-  //   //   event.preventDefault();
-
-  //   // }
-  //   alert("Hey");
-  //   props.handleSearch(findLocation);
-  // };
-
   return (
     <motion.div
       className="searchbar-cont"
