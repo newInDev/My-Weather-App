@@ -19,6 +19,7 @@ const SearchBar = (props) => {
     if (event.keyCode === 13 || event.which === 13) {
       event.preventDefault();
       props.handleSearch(event.target.value);
+      alert("I was Clicked");
     }
   };
 
