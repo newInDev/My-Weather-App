@@ -8,6 +8,7 @@ import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 const WeatherCard = (props) => {
   console.log(props.weatherCode);
+  alert(`i am from props ${props.cityName}`);
 
   const styles = {
     backgroundImage: `url(${backgrounds[props.weatherCode]})`,

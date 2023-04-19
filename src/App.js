@@ -162,6 +162,7 @@ function App() {
   }, [longitude]);
 
   React.useEffect(() => {
+    alert(`I am city in useState: ${city}`);
     if (city === "") return;
     fetch(geoLocationUrl)
       .then((resposne) => resposne.json())
