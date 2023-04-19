@@ -26,6 +26,7 @@ function App() {
   };
 
   const handleSearch = (city) => {
+    alert(`Hey Am am a city user Set: ${city}`);
     setCity(city);
   };
 
