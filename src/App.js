@@ -17,7 +17,7 @@ function App() {
 
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&current_weather=true&timeformat=unixtime&timezone=Europe%2FMoscow`;
 
-  const geoLocationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=d21e817e10bf9f90a0e1e7896bf715e3`;
+  const geoLocationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${process.env.React_App_Location_Api}`;
 
   let tempObject = [];
 
@@ -26,7 +26,6 @@ function App() {
   };
 
   const handleSearch = (city) => {
-    alert(`Hey Am am a city user Set: ${city}`);
     setCity(city);
   };
 
@@ -127,26 +126,26 @@ function App() {
     );
   };
 
-  // React.useEffect(() => {
-  //   if (navigator.geolocation) {
-  //     setGeoLocationAvailable(true);
-  //   }
-  // }, []);
+  React.useEffect(() => {
+    if (navigator.geolocation) {
+      setGeoLocationAvailable(true);
+    }
+  }, []);
 
-  // React.useEffect(() => {
-  //   if (geoLocationAvailable) {
-  //     navigator.geolocation.getCurrentPosition((position) => {
-  //       setLatitude(position.coords.latitude);
-  //       setLongitude(position.coords.longitude);
-  //       getCityName(position.coords.latitude, position.coords.longitude);
-  //     });
-  //   } else {
-  //     console.log("test");
-  //     setLatitude(41.716667);
-  //     setLongitude(44.783333);
-  //     setCityName("Tbilisi");
-  //   }
-  // }, [geoLocationAvailable]);
+  React.useEffect(() => {
+    if (geoLocationAvailable) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLatitude(position.coords.latitude);
+        setLongitude(position.coords.longitude);
+        getCityName(position.coords.latitude, position.coords.longitude);
+      });
+    } else {
+      console.log("test");
+      setLatitude(41.716667);
+      setLongitude(44.783333);
+      setCityName("Tbilisi");
+    }
+  }, [geoLocationAvailable]);
 
   React.useEffect(() => {
     if (longitude === "") return;
@@ -160,7 +159,6 @@ function App() {
   }, [longitude]);
 
   React.useEffect(() => {
-    alert(`I am city in useState: ${city}`);
     if (city === "") return;
     fetch(geoLocationUrl)
       .then((resposne) => resposne.json())
