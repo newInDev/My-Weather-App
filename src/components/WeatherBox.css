@@ -35,6 +35,33 @@
     white-space: nowrap;
     gap: 20px; */
     display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    overflow-x: scroll;
+    justify-content: left;
+    height: 400px;
+  }
+  .weatherBox-cont::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .weatherBox-cont {
+    width: auto;
+    /* width: 40%;
+    height: 350px;
+    margin: auto;
+    padding-left: 450px;
+    background-color: blueviolet;
+    background-color: #333;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    white-space: nowrap;
+    gap: 20px; */
+    display: grid;
     grid-auto-flow: row;
     width: 100%;
     box-sizing: border-box;
@@ -45,24 +72,5 @@
   }
   .weatherBox-cont::-webkit-scrollbar {
     display: none;
-  }
-
-  .preview-card {
-    display: block;
-    position: absolute;
-    color: #fff;
-    font-size: 50px;
-    top: 40%;
-    left: 0;
-    cursor: pointer;
-  }
-  .next-card {
-    display: block;
-    position: absolute;
-    color: #fff;
-    font-size: 50px;
-    top: 40%;
-    left: 96%;
-    cursor: pointer;
   }
 }

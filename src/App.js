@@ -171,7 +171,7 @@ function App() {
         setLatitude(data[0].lat);
         setLongitude(data[0].lon);
         // setCityName(data[0].name);
-        setCityName(data[0].display_name);
+        setCityName(data[0].display_name.split(",")[0]);
       });
   }, [city]);
 
