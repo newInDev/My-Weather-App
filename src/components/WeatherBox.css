@@ -41,7 +41,7 @@
     gap: 20px;
     overflow-x: scroll;
     justify-content: center;
-    height: 570px;
+    height: 600px;
   }
   .weatherBox-cont::-webkit-scrollbar {
     display: none;

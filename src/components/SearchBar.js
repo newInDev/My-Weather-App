@@ -19,7 +19,7 @@ const SearchBar = (props) => {
   const handleKeyDown = (event) => {
     if (event.keyCode === 13 || event.which === 13) {
       event.preventDefault();
-      alert(findLocation);
+      alert("Hey");
       props.handleSearch(findLocation);
     }
   };
