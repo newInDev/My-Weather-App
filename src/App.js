@@ -17,7 +17,9 @@ function App() {
 
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&current_weather=true&timeformat=unixtime&timezone=Europe%2FMoscow`;
 
-  const geoLocationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${process.env.REACT_APP_API_KEY}`;
+  // const geoLocationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${process.env.REACT_APP_API_KEY}`;
+
+  const geoLocationUrl = `https://geocode.maps.co/search?q=${city}`;
 
   let tempObject = [];
 
@@ -160,13 +162,16 @@ function App() {
 
   React.useEffect(() => {
     if (city === "") return;
+
     fetch(geoLocationUrl)
       .then((resposne) => resposne.json())
       .then((data) => {
         // console.log(data);
+        console.log(data[0].display_name);
         setLatitude(data[0].lat);
         setLongitude(data[0].lon);
-        setCityName(data[0].name);
+        // setCityName(data[0].name);
+        setCityName(data[0].display_name);
       });
   }, [city]);
 

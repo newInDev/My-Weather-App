@@ -13,7 +13,7 @@ const SearchBar = (props) => {
       event.keyCode === 13
     ) {
       event.preventDefault();
-      alert(event.target.value);
+
       props.handleSearch(event.target.value);
     }
   };
