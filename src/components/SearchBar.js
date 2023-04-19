@@ -20,7 +20,6 @@ const SearchBar = (props) => {
     if (event.keyCode === 13 || event.which === 13) {
       event.preventDefault();
       alert(findLocation);
-      console.log(props.handleSearch);
       props.handleSearch(findLocation);
     }
   };
