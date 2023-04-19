@@ -127,28 +127,26 @@ function App() {
     );
   };
 
-  React.useEffect(() => {
-    if (navigator.geolocation) {
-      setGeoLocationAvailable(true);
-    }
-  }, []);
-  React.useEffect(() => {
-    if (geoLocationAvailable) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        setLatitude(position.coords.latitude);
-        setLongitude(position.coords.longitude);
-        getCityName(position.coords.latitude, position.coords.longitude);
-      });
-    } else {
-      console.log("test");
-      setLatitude(41.716667);
-      setLongitude(44.783333);
-      setCityName("Tbilisi");
-    }
-  }, [geoLocationAvailable]);
+  // React.useEffect(() => {
+  //   if (navigator.geolocation) {
+  //     setGeoLocationAvailable(true);
+  //   }
+  // }, []);
 
-  console.log(latitude);
-  console.log(longitude);
+  // React.useEffect(() => {
+  //   if (geoLocationAvailable) {
+  //     navigator.geolocation.getCurrentPosition((position) => {
+  //       setLatitude(position.coords.latitude);
+  //       setLongitude(position.coords.longitude);
+  //       getCityName(position.coords.latitude, position.coords.longitude);
+  //     });
+  //   } else {
+  //     console.log("test");
+  //     setLatitude(41.716667);
+  //     setLongitude(44.783333);
+  //     setCityName("Tbilisi");
+  //   }
+  // }, [geoLocationAvailable]);
 
   React.useEffect(() => {
     if (longitude === "") return;
