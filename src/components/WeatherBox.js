@@ -24,59 +24,13 @@ const WeatherBox = (props) => {
     return () => window.removeEventListener("resize", handleResizer);
   }, []);
 
-  // const nextCard = () => {
-  //   let newIndx = currIndex >= 4 ? 0 : currIndex + 1;
-  //   setCurrIndex(newIndx);
-  // };
-
-  // const prevCard = () => {
-  //   let newIndx = currIndex === 0 ? 4 : currIndex - 1;
-  //   setCurrIndex(newIndx);
-  // };
-
-  // const handleTouchStart = (event) => {
-  //   console.log(event.touches[0].clientX);
-  //   setStartX(event.touches[0].clientX);
-  // };
-
-  // const handleTouchMove = (event) => {
-  //   console.log(event.touches[0].clientX);
-  //   setEndX(event.touches[0].clientX);
-  // };
-
-  // const handleToucheEnd = (event) => {
-  //   const threshold = 50;
-  //   console.log(`Start X: ${startX}`);
-  //   console.log(endX);
-  //   if (
-  //     startX !== null &&
-  //     endX !== null &&
-  //     Math.abs(endX - startX) > threshold
-  //   ) {
-  //     if (endX < startX) {
-  //       prevCard();
-  //     } else {
-  //       nextCard();
-  //     }
-  //   }
-  // };
-
   return (
     <motion.div
       className="weatherBox-cont"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 3, delay: 0.5 }}
-      // onTouchStart={handleTouchStart}
-      // onTouchMove={handleTouchMove}
-      // onTouchEnd={handleToucheEnd}
     >
-      {/* <div className="preview-card" onClick={prevCard}>
-        ❰
-      </div>
-      <div className="next-card" onClick={nextCard}>
-        ❱
-      </div> */}
       {props.weatherData ? (
         props.weatherData.map((item, indx) => {
           const currentCard = indx === currIndex;
