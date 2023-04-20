@@ -224,7 +224,7 @@
   color: #fff;
 }
 
-/* @media (max-width: 750px) {
+@media (max-width: 750px) {
   .card {
     width: 250px;
     height: 260px;
@@ -243,4 +243,4 @@
     width: 200px;
     height: 250px;
   }
-} */
+}
