@@ -50,7 +50,7 @@
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
     justify-content: left;
-    height: 600px;
+    height: 300px;
   }
   .weatherBox-cont::-webkit-scrollbar {
     display: none;
